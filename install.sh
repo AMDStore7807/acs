@@ -2,16 +2,7 @@ GREEN='\033[0;32m'
 RED='\033[0;31m'
 NC='\033[0m'
 local_ip=$(hostname -I | awk '{print $1}')
-echo -e "${GREEN}============================================================================${NC}"
-echo -e "${GREEN}============================================================================${NC}"
-echo -e "${GREEN}=========== AAA   LL      IIIII     JJJ   AAA   YY   YY   AAA ==============${NC}"   
-echo -e "${GREEN}========== AAAAA  LL       III      JJJ  AAAAA  YY   YY  AAAAA =============${NC}" 
-echo -e "${GREEN}========= AA   AA LL       III      JJJ AA   AA  YYYYY  AA   AA ============${NC}"
-echo -e "${GREEN}========= AAAAAAA LL       III  JJ  JJJ AAAAAAA   YYY   AAAAAAA ============${NC}"
-echo -e "${GREEN}========= AA   AA LLLLLLL IIIII  JJJJJ  AA   AA   YYY   AA   AA ============${NC}"
-echo -e "${GREEN}============================================================================${NC}"
-echo -e "${GREEN}========================= . Info 081-947-215-703 ===========================${NC}"
-echo -e "${GREEN}============================================================================${NC}"
+
 echo -e "${GREEN}${NC}"
 echo -e "${GREEN}Autoinstall GenieACS.${NC}"
 echo -e "${GREEN}${NC}"
@@ -153,7 +144,7 @@ fi
 #Sukses
 echo -e "${GREEN}============================================================================${NC}"
 echo -e "${GREEN}========== GenieACS UI akses port 3000. : http://$local_ip:3000 ============${NC}"
-echo -e "${GREEN}=================== Informasi: Whatsapp 081947215703 =======================${NC}"
+echo -e "${GREEN}=================== Informasi: Whatsapp 085150614774 =======================${NC}"
 echo -e "${GREEN}============================================================================${NC}"
 echo -e "${GREEN}Sekarang install parameter. Apakah anda ingin melanjutkan? (y/n)${NC}"
 read confirmation
@@ -175,5 +166,5 @@ echo -e "${GREEN}===============================================================
 echo -e "${GREEN}=================== VIRTUAL PARAMETER BERHASIL DI INSTALL. =================${NC}"
 echo -e "${GREEN}=== Edit di Admin >> Provosions >> inform ACS URL ganti ip server ini  =====${NC}"
 echo -e "${GREEN}========== GenieACS UI akses port 3000. : http://$local_ip:3000 ============${NC}"
-echo -e "${GREEN}=================== Informasi: Whatsapp 081947215703 =======================${NC}"
+echo -e "${GREEN}=================== Informasi: Whatsapp 085150614774 =======================${NC}"
 echo -e "${GREEN}============================================================================${NC}"
