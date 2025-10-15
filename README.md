@@ -17,7 +17,7 @@ cd acs
 ```
 
 ```
-chmod +x install.sh && chmod +x darkmode.sh
+chmod +x install.sh && chmod +x darkmode.sh && chmod +x test.sh
 ```
 
 INSTALL GENIEACS DARKMODE Ubuntu OS 22.04
@@ -30,6 +30,12 @@ INSTALL GENIEACS THEMA ORIGINAL v@1.2.13
 
 ```
 bash install.sh
+```
+
+INSTALL GENIEACS PILIH THEMA
+
+```
+bash test.sh
 ```
 
 Baca terlebih dahulu !!!
