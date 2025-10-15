@@ -204,6 +204,28 @@ EOF
 fi
 
 
+echo -e "${GREEN}============================================================================${NC}"
+echo -e "${GREEN}========== GenieACS UI akses port 3000. : http://$local_ip:3000 ============${NC}"
+echo -e "${GREEN}=================== Informasi: Whatsapp 085150614774 =======================${NC}"
+echo -e "${GREEN}============================================================================${NC}"
+echo -e "${GREEN}Sekarang install parameter. Apakah anda ingin melanjutkan? (y/n)${NC}"
+read confirmation
+
+if [ "$confirmation" != "y" ]; then
+    echo -e "${GREEN}Install dibatalkan..${NC}"
+    
+    exit 1
+fi
+for ((i = 5; i >= 1; i--)); do
+    sleep 1
+    echo "Lanjut Install Parameter $i. Tekan ctrl+c untuk membatalkan"
+done
+
+mongorestore --db genieacs --drop db
+systemctl stop --now genieacs-{cwmp,fs,ui,nbi}
+systemctl start --now genieacs-{cwmp,fs,ui,nbi}
+
+
 # ============================================================
 # Selesai & Info Akses
 # ============================================================
