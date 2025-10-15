@@ -13,7 +13,7 @@ git clone https://github.com/AMDStore7807/acs
 ```
 
 ```
-cd genieacs
+cd acs
 ```
 
 ```
