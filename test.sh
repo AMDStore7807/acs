@@ -91,16 +91,17 @@ fi
 # Install MongoDB (universal, semua Linux)
 # ============================================================
 if ! systemctl is-active --quiet mongod; then
-    echo -e "${BLUE}================== Menginstall MongoDB 6.0 ==================${NC}"
-    curl -fsSL https://pgp.mongodb.com/server-6.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg --dearmor
-    echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+    echo -e "${BLUE}================== Menginstall MongoDB 7.0 ==================${NC}"
+    curl -fsSL https://pgp.mongodb.com/server-7.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg --dearmor
+    echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/7.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-7.0.list
     apt-get update
     apt-get install -y mongodb-org
     systemctl enable --now mongod
-    echo -e "${BLUE}================== MongoDB Berhasil Terinstall ==================${NC}"
+    echo -e "${BLUE}================== MongoDB 7.0 Berhasil Terinstall ==================${NC}"
 else
     echo -e "${BLUE}MongoDB sudah aktif.${NC}"
 fi
+
 
 # ============================================================
 # Install GenieACS
@@ -208,7 +209,7 @@ echo -e "${GREEN}===============================================================
 echo -e "${GREEN}========== GenieACS UI akses port 3000. : http://$local_ip:3000 ============${NC}"
 echo -e "${GREEN}=================== Informasi: Whatsapp 085150614774 =======================${NC}"
 echo -e "${GREEN}============================================================================${NC}"
-echo -e "${GREEN}Sekarang install parameter. Apakah anda ingin melanjutkan? (y/n)${NC}"
+echo -e "${GREEN}====== Sekarang install parameter. Apakah anda ingin melanjutkan? (y/n) ====${NC}"
 read confirmation
 
 if [ "$confirmation" != "y" ]; then
@@ -237,4 +238,3 @@ echo -e "${BLUE}============= Install selesai! Log tersimpan di: ${LOG_FILE} ===
 echo -e "${BLUE}================ Untuk melihat log: cat ${LOG_FILE} ========================${NC}"
 echo -e "${BLUE}================== Instalasi Selesai, GENIEACS Siap Jalan! =================${NC}"
 echo -e "${BLUE}============================================================================${NC}"
-
