@@ -93,14 +93,15 @@ fi
 if ! systemctl is-active --quiet mongod; then
     echo -e "${BLUE}================== Menginstall MongoDB 7.0 ==================${NC}"
     curl -fsSL https://pgp.mongodb.com/server-7.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg --dearmor
-    echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/7.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-7.0.list
-    apt-get update
-    apt-get install -y mongodb-org
-    systemctl enable --now mongod
+    echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu $(lsb_release -cs)/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+    sudo apt-get update
+    sudo apt-get install -y mongodb-org
+    sudo systemctl enable --now mongod
     echo -e "${BLUE}================== MongoDB 7.0 Berhasil Terinstall ==================${NC}"
 else
     echo -e "${BLUE}MongoDB sudah aktif.${NC}"
 fi
+
 
 
 # ============================================================
