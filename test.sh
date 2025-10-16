@@ -2,7 +2,7 @@
 set -e  # Stop script jika ada error fatal
 
 # Warna
-BLUE='\033[0;34m'
+BLUE='\033[38;5;110m'
 RED='\033[0;31m'
 NC='\033[0m'
 
