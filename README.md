@@ -34,6 +34,28 @@ INSTALL GENIEACS PILIH THEMA
 bash auto.sh
 ```
 
+# Pastikan Anda berada di direktori acs
+
+```
+cd acs
+```
+
+# (Jika baru di-clone, masuk dengan 'cd acs')
+
+# Untuk restart system jika tidak muncul:
+
+# Berikan izin eksekusi
+
+```
+chmod +x restart.sh
+```
+
+# Jalankan script
+
+```
+bash restart.sh
+```
+
 Baca terlebih dahulu !!!
 
 #=== Script update GenieACS ====#
