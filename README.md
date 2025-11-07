@@ -25,13 +25,13 @@ cd acs
 ```
 
 ```
-chmod +x install.sh && chmod +x darkmode.sh && chmod +x test.sh
+chmod +x auto.sh
 ```
 
 INSTALL GENIEACS PILIH THEMA
 
 ```
-bash test.sh
+bash auto.sh
 ```
 
 Baca terlebih dahulu !!!
